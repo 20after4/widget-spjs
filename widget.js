@@ -1853,26 +1853,12 @@ chilipeppr.publish("/com-chilipeppr-widget-serialport/send", "G1 X10 F500\\n");
                 buffer: "default",
                 img: "http://chilipeppr.com/img/boards/mega.jpg"
             },
-            // "ch340" : {
-            //     vidpids: [{vid:"1A86", pid:"7523"}],
-            //     //regexp: /arduino mega2560 clone/i,
-            //     name: "CH340 Generic",
-            //     // buffer: "default",
-            //     img: "http://chilipeppr.com/img/boards/megaCh340.jpg"
-            // },
-            "nodemcu" : {
-                vidpids: [{vid:"10c4", pid:"ea60"}],
-                name: "NodeMCU / CP2102",
-                buffer: "nodemcu",
-                baud: "115200",
-                img: "https://github.com/20after4/workspace-esp32-micropython/blob/master/esp32-devkitc.png"
-            },
             "esp32-devkit": {
-                vidpids: [{vid:"ea60", pid: "10c4"}],
+                vidpids: [{vid:"ea60", pid: "10c4"}, {vid:"10c4", pid:"ea60"}],
                 name: "ESP32 Devkit / CP2102",
                 buffer: "micropython",
                 baud: "115200",
-
+                img: "https://github.com/20after4/workspace-esp32-micropython/blob/master/esp32-devkitc.png"
             }
         },
         setPortItemsFromMetaData: function(dm /*device meta*/, item /*port*/, portlistIndex) {
